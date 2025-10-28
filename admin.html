@@ -2,7 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | VE Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+    <p class="subtitle">Manage users, track form submissions, and add new forms.</p>
+
+    <!-- === USER CREATION === -->
+    <div class="admin-section">
+      <h2>Add New User</h2>
+      <div class="form-row">
+        <input type="text" id="newUsername" placeholder="Username">
+        <input type="password" id="newPassword" placeholder="Password">
+        <select id="newRole">
+          <option value="employee">Employee</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button onclick="addUser()">Add</button>
+      </div>
+    </div>
+
+    <!-- === USERS OVERVIEW === -->
+    <div class="admin-section">
+      <h2>All Users</h2>
+      <div id="usersTable" class="data-table"></div>
+    </div>
+
+    <!-- === ASSIGN FORMS === -->
+    <div class="admin-section">
+      <h2>Assign Form</h2>
+      <div class="form-row">
+        <select id="assignUser">
+          <option value="">Select User</option>
+        </select>
+        <input type="text" id="formName" placeholder="Form Name">
+        <input type="url" id="formURL" placeholder="Form URL">
+        <button onclick="assignForm()">Assign</button>
+      </div>
+    </div>
+
+    <!-- === VIEW ALL FORMS === -->
+    <div class="admin-section">
+      <h2>Forms Page</h2>
+      <p>Manage or view all company forms here.</p>
+      <a href="forms.html" class="btn-link">Go to Forms Page →</a>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
