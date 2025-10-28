@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+    <div class="admin-controls">
+      <h2>Assign Form to Employee</h2>
+      <input type="text" id="assign-username" placeholder="Employee Username">
+      <input type="text" id="form-name" placeholder="Form Name">
+      <input type="text" id="form-link" placeholder="Form Link (Google Form)">
+      <button onclick="assignForm()">Assign Form</button>
+    </div>
+    <h2>All Users</h2>
+    <div id="usersList"></div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
